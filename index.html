@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Counter</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <h1>{{ headerText }}</h1>
+        <p>{{ message }}</p>
+        <div style="margin: 4.25vh 0" class="workout-list-container">
+            <table class="workout-list-table">
+                <tr>
+                  <th>Exercise</th>
+                  <th>Reps</th>
+                  <th>Count</th>
+                </tr>
+                <tr>
+                    <td>Diamond pushups</td>
+                    <td>20</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Pushups</td>
+                    <td>30</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Squats</td>
+                    <td>40</td>
+                    <td>0</td>
+                </tr>
+
+                
+            </table>
+        </div>
+        <form class="add-new-workout-container">
+            <input type="text" name="new-workout" id="workout-user-input" class="workout-user-input">
+            <input type="number"min="1" max="99" name="new-workout-reps" id="workout-reps-user-input" class="workout-reps-user-input">
+            <button type="submit"><p>Add New Workout</p></button>
+        </form>
+        
+      </input>
+    </div>
+    <script src="app.js">
+    </script>
+</body>
+</html>

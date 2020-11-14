@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700;900&display=swap");
+:root {
+  --primary-clr: #183152;
+  --secondary-clr: #244979;
+  --tablet-bp: 1023px; /* max-width */
+  --mobile-bp: 480px; /*,max-width */
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  /* background: var(--secondary-clr); */
+  background: url("https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1015&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+h1 {
+  font-size: 4.883rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  max-width: 75ch;
+}
+h2 {
+  font-size: 3.906rem;
+  font-family: "Quicksand", sans-serif;
+}
+h3 {
+  font-size: 2.734rem;
+  font-family: "Quicksand", sans-serif;
+}
+p,
+a,
+li,
+td,
+th {
+  font-family: "Maven Pro", sans-serif;
+  max-width: 60ch;
+  font-size: 1.6rem;
+}
+@media (max-width: 1023px) {
+  h1 {
+    font-size: 4.272rem;
+  }
+  h2 {
+    font-size: 3.418rem;
+  }
+  h3 {
+    font-size: 2.734rem;
+  }
+  p,
+  a,
+  li,
+  td,
+  th {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p,
+  a,
+  li,
+  td,
+  th {
+    font-size: 1.25rem;
+  }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: var(--secondary-clr); */
+  color: #fcfcfc;
+  padding: 10vh 0;
+}
+.workout-list-container {
+  /* background: var(--secondary-clr); */
+  width: 50vw;
+  max-width: 50vw;
+  min-height: 25vh;
+}
+.workout-list-table th,
+.workout-list-table td {
+  padding: 2.5vmin;
+}
+.workout-list-table th {
+  text-align: left;
+  font-size: 150%;
+  background: var(--primary-clr);
+}
+.workout-list-table th:nth-of-type(1) {
+  min-width: 30vw;
+  width: 60%;
+}
+.workout-list-table th:nth-of-type(2) {
+  width: 15%;
+  border-left: 2px solid var(--secondary-clr);
+  border-right: 2px solid var(--secondary-clr);
+}
+.workout-list-table th:nth-of-type(3) {
+  width: 25%;
+}
+.workout-list-table td {
+  font-size: 125%;
+  /* border: 1px solid red; */
+}
+.workout-list-table tr:nth-last-of-type(odd) {
+  /* background: #3061a0; */
+  background: rgba(48, 97, 160, 0.125);
+}
+.workout-list-table tr:nth-last-of-type(even) {
+  /* background: #3e79c5; */
+  background: rgba(62, 121, 197, 0.125);
+}
+@media (max-width: 480px) {
+  .workout-list-table th {
+    font-size: 115%;
+  }
+  .workout-list-table td {
+    font-size: 100%;
+  }
+}
+.add-new-workout-container {
+  display: flex;
+  width: 50vw;
+  max-width: 50vw;
+  min-height: 7.5vmin;
+  /* border: 1px solid green;   */
+}
+.add-new-workout-container button {
+  width: 25%;
+  max-width: 15vw;
+  cursor: pointer;
+  background: #3099a0;
+  /* padding: 2.5vmin 4.25vmin; */
+  padding: 2.5vmin;
+  color: #fcfcfc;
+  border: 0;
+  transition: ease-in-out 0.2s;
+
+  /* border: 2px solid #fcfcfc; */
+}
+.add-new-workout-container button:hover,
+.add-new-workout-container button:focus {
+  background: hsl(180, 59%, 51%);
+  /* transition: ease-in-out 0.2s; */
+}
+.add-new-workout-container button:active {
+  margin-top: 1.25vmin;
+}
+.workout-user-input {
+  min-width: 30vw;
+  width: 60%;
+  padding: 2.5vmin;
+  /* padding: 2.5vmin 4.25vmin; */
+  font-size: 125%;
+
+  transition: 0.2s ease-in-out;
+  border: 0;
+  /* border: 1px solid red;   */
+}
+.workout-reps-user-input {
+  /* width: 15%; */
+  /* max-width: 15%; */
+  font-size: 125%;
+  padding-left: 2.5%;
+  width: 12.5%;
+  border: 0;
+  border-left: 2px solid var(--secondary-clr);
+  border-right: 2px solid var(--secondary-clr);
+}
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+/* Firefox */
+/* input[type="number"] {
+  -moz-appearance: textfield;
+} */
+@media (max-width: 1023px) {
+  .workout-list-container,
+  .add-new-workout-container {
+    width: 80vw;
+    max-width: 80vw;
+  }
+  .add-new-workout-container button {
+    width: 25vw;
+    max-width: 25vw;
+  }
+  .workout-user-input {
+    width: 75vw;
+    /* border: 1px solid red;  */
+  }
+}
+@media (max-width: 480px) {
+  .workout-list-container,
+  .add-new-workout-container {
+    width: 90vw;
+    max-width: 90vw;
+  }
+  .add-new-workout-container button {
+    width: 25vw;
+    max-width: 25vw;
+  }
+  .workout-user-input {
+    width: 60%;
+    /* border: 1px solid red;  */
+  }
+}
